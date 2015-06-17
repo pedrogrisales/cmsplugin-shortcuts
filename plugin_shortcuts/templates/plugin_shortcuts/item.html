@@ -1,0 +1,56 @@
+
+
+{% if instance.publicado or user.is_authenticated  %}
+
+{% load thumbnail %}
+
+<div class="shortcuts-item {% if not instance.publicado %} overlay{% endif %}">
+
+    {% if instance.url %}
+        <a href="{{instance.url}}">
+    {% else %}
+        {% if instance.pagina %}
+            <a href="{{instance.pagina.get_absolute_url}}" target="blank">
+        {% endif %}
+    {% endif %}
+
+    <span class="shortcuts-item-title">
+        {% if instance.url or instance.pagina %}
+            <i class="fa fa-external-link"></i>
+        {% else %}
+            <i class="fa fa-bookmark-o"></i>
+        {% endif %}
+            {{ instance.titulo }}
+    </span>
+    {% if instance.url or instance.pagina %}
+        </a>
+    {% endif %}
+
+    {% if instance.imagen %}
+        <img class="shortcuts-item-image" src='{% thumbnail instance.imagen "120x120" upscale %}' alt="{{instance.titulo|default:''}}" width="120" >
+    {% endif %}
+
+    {% if instance.mostrar_descripcion %}
+        <div class="shortcuts-item-description text-justify">
+            {{instance.descripcion|safe}}
+        </div>
+    {% endif %}
+
+    {% if instance.mostrar_boton_ver_mas %}
+    <div class="shortcuts-item-footer">
+        {% if instance.url %}
+            <a href="{{instance.url}}" class="button tiny secondary">Ver más</a>
+        {% else %}
+            {% if instance.pagina %}
+                <a href="{{instance.pagina.get_absolute_url}}" target="blank" class="button tiny secondary">Ver más</a>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    {% endif %}
+
+
+
+</div>
+
+{% endif %}

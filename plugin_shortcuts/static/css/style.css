@@ -1,0 +1,103 @@
+.shortcuts {
+padding: 0.625rem 0; }
+
+.shortcuts-mosaic .shortcuts-item {
+border-bottom: 1px solid #ddd;
+display: inline-block;
+margin-bottom: 10px;
+padding-bottom: 10px;
+vertical-align: top;
+margin-right: 0;
+position: relative;}
+
+.shortcuts-mosaic .shortcuts-item.shortcuts-item-2 {
+width: 100%; }
+
+.shortcuts-mosaic .shortcuts-item.shortcuts-item-3 {
+width: 100%; }
+
+.shortcuts-mosaic .shortcuts-item.shortcuts-item-4 {
+width: 100%; }
+
+.shortcuts-mosaic .shortcuts-item .shortcuts-item-image {
+float: left;
+margin-right: 20px;
+width: 120px; }
+
+.shortcuts-mosaic .shortcuts-item .shortcuts-item-title {
+display: block;
+font-size: 1.1875rem;
+margin-bottom: 20px; }
+
+.shortcuts-mosaic .shortcuts-item .shortcuts-item-description {
+width: 100%; }
+
+.shortcuts-mosaic .shortcuts-item .shortcuts-item-footer {
+text-align: right; }
+
+.shortcuts-mosaic .shortcuts-item .shortcuts-item-footer a {
+margin-bottom: 0; }
+
+.shortcuts-list {
+margin: 0;
+padding: 0.625rem 0;
+list-style: none; }
+
+.shortcuts-list .shortcuts-item {
+padding: 0.625rem;
+margin: 0;
+width: 100%;
+font-size: 0.7rem;
+line-height: normal;
+overflow: hidden;
+border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.1); }
+
+.shortcuts-list .shortcuts-item .shortcuts-item-image {
+float: right; }
+
+.shortcuts-list .shortcuts-item .shortcuts-item-title {
+color: #fff;
+text-align: left;
+height: 100%;
+line-height: 2.1875rem;
+vertical-align: middle;
+font-size: 0.875rem; }
+
+.shortcuts-list .shortcuts-item a {
+text-decoration: none;
+text-align: left;
+display: block; }
+
+.shortcuts-list.shortcuts-list-bar {
+margin: 0 auto 1.0625rem auto;
+margin-left: -1.375rem;
+margin-right: 0;
+padding: 0;
+list-style: none;
+overflow: hidden;
+background-color: #e6e6e6;
+margin: 0; }
+
+.shortcuts-list.shortcuts-list-bar > li {
+list-style: none;
+float: left;
+margin-left: 1.375rem;
+display: block; }
+
+.shortcuts-list.shortcuts-list-bar > li > * {
+display: block; }
+
+.shortcuts-list.shortcuts-list-bar .shortcuts-item {
+width: 100%;
+height: 5rem;
+border-right: 0.0625rem solid #c4c4c4;
+margin: 0; }
+
+.shortcuts-list.shortcuts-list-bar .shortcuts-item .shortcuts-item-title {
+color: #0088cc;
+font-size: 0.75rem;
+line-height: 3.75rem;
+font-weight: bold; }
+
+.shortcuts-list.shortcuts-list-bar .shortcuts-item:nth-last-child(1) {
+border-right: none; }

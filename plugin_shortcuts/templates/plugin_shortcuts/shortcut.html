@@ -1,0 +1,32 @@
+{% load thumbnail %}
+
+<div class="shortcuts-item">
+
+    {% if instance.url %}
+        <a href="{{instance.url}}">
+    {% else %}
+        {% if instance.pagina %}
+            <a href="{{instance.pagina.get_absolute_url}}">
+        {% endif %}
+    {% endif %}
+
+
+    {% if instance.image %}
+        <img class="shortcuts-item-image" src='{% thumbnail instance.imagen "35x35" crop upscale %}' width="35" height="35" alt="{{instance.titulo|default:''}}" >
+    {% endif %}
+
+    <span class="shortcuts-item-title">{{ instance.titulo }}</span>
+
+    {% if instance.mostrar_descripcion %}
+        <div class="shortcuts-item-description">
+            {{instance.descripcion}}
+        </div>
+    {% endif %}
+
+
+    {% if instance.url or instance.pagina %}
+        </a>
+    {% endif %}
+
+</div>
+

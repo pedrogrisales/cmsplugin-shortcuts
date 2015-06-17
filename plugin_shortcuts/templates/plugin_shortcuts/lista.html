@@ -1,0 +1,37 @@
+{% load  sekizai_tags %}
+{% load placeholder_tags %}
+
+<div class="shortcuts-list">
+    <div class="shortcuts-list-slider">
+        {% for item in lista %}
+            {% include "plugin_shortcuts/shortcut.html" with instance=item %}
+        {% endfor %}
+    </div>
+</div>
+
+<span class="slider-control next"></span>
+
+{% addtoblock "js" %}
+<script type="text/javascript">
+
+    var slider = $('.shortcuts-list-slider').bxSlider({
+        mode: 'vertical',
+        minSlides: 6,
+        maxSlide:   6,
+        moveSlides: 1,
+        slideMargin: 0,
+        auto:false,
+        controls:true,
+        pager:false,
+        autoStart:false,
+        nextSelector: '.slider-control.next',
+        prevSelector: '.slider-control.prev',
+        nextText: '<span class="arrow arrow-down"></span>',
+        prevText: '<span class="arrow arrow-up"></span>',
+    });
+
+    $(".bx-window").removeAttr('style');
+    $(".bx-wrapper").removeAttr('style');
+
+</script>
+{% endaddtoblock %}

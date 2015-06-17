@@ -1,0 +1,13 @@
+{% load  sekizai_tags %}
+
+{% addtoblock 'js' %}
+<script type="text/javascript">
+
+    $(function(){
+        $('.shortcuts-item')
+            .addClass('shortcuts-item-{{columns}}')
+            .parent()
+            .addClass('shortcuts-mosaic');
+    });
+</script>
+{% endaddtoblock %}

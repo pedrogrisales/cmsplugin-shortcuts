@@ -1,0 +1,30 @@
+
+{% load thumbnail %}
+
+<ul class="shortcuts-list shortcuts-list-bar">
+
+{% for item in lista %}
+
+    <li class="shortcuts-item">
+
+    	{% if item.url %}
+        	<a href="{{item.url}}">
+        {% else %}
+        	{% if item.pagina %}
+            	<a href="{{item.pagina.get_absolute_url}}">
+            {% endif %}
+        {% endif %}
+
+        <img class="shortcuts-item-image" src='{% thumbnail item.imagen "60x60" crop upscale %}' width="60" height="60" alt="{{item.titulo|default:''}}" >
+
+       	<span class="shortcuts-item-title">{{ item.titulo }}</span>
+
+    	{% if item.url or item.pagina %}
+        	</a>
+        {% endif %}
+
+    </li>
+
+{% endfor %}
+
+</ul>

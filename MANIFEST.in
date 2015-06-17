@@ -1,0 +1,5 @@
+include LICENSE
+include README.rst
+recursive-include plugin_shortcuts/static *
+recursive-include plugin_shortcuts/templates *
+recursive-include docs *
