@@ -1,10 +1,13 @@
+{% load thumbnail %}
+{% load  sekizai_tags %}
 
+{% addtoblock "css" %}
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/cmspluginshortcuts.css">
+{% endaddtoblock %}
 
 {% if instance.publicado or user.is_authenticated  %}
 
-{% load thumbnail %}
-
-<div class="shortcuts-item {% if not instance.publicado %} overlay{% endif %}">
+<div class="shortcuts-item {% if not instance.publicado %} hidden{% endif %}">
 
     {% if instance.url %}
         <a href="{{instance.url}}">

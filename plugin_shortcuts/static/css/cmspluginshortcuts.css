@@ -1,0 +1,17 @@
+.shortcuts-item{
+	position: relative;
+}
+.shortcuts-item.hidden:after{  
+	content: "Oculto";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255,0,0,0.5);
+	text-align: right;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+}
+
